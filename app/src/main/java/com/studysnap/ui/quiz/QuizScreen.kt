@@ -7,8 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -39,7 +38,7 @@ fun QuizScreen(conceptId: String, subjectId: String, navController: NavControlle
 }
 
 @Composable
-private fun QuestionCard(q: QuizViewModel.QuestionDisplay, onAnswer: (Int) -> Unit) {
+fun QuestionCard(q: QuizViewModel.QuestionDisplay, onAnswer: (Int) -> Unit) {
     var selected by remember { mutableIntStateOf(-1) }
     var revealed by remember { mutableStateOf(false) }
 
@@ -87,6 +86,43 @@ private fun QuestionCard(q: QuizViewModel.QuestionDisplay, onAnswer: (Int) -> Un
             Spacer(Modifier.height(16.dp))
             Button(onClick = { viewModel.nextQuestion(selected) }, colors = ButtonDefaults.buttonColors(containerColor = Accent)) {
                 Text("Next")
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun QuizPreview() {
+    StudySnapTheme {
+        QuestionCard(
+            q = QuizViewModel.QuestionDisplay(0, 3, "What is Newton's Second Law?",
+                listOf("F = ma", "F = m/a", "F = am", "F = m²a"), 0,
+                "F = ma means force equals mass times acceleration.", false),
+            onAnswer = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun ResultPreview() {
+    StudySnapTheme {
+        Column(Modifier.fillMaxSize().padding(32.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+            Text("Quiz Complete!", style = MaterialTheme.typography.displayLarge, color = Primary)
+            Spacer(Modifier.height(8.dp))
+            Text("Newton's Second Law", style = MaterialTheme.typography.titleLarge, color = TextSecondary)
+            Spacer(Modifier.height(32.dp))
+            Text("2 / 3", style = MaterialTheme.typography.displayLarge, color = WarningOrange)
+            Text("67%", style = MaterialTheme.typography.titleMedium, color = WarningOrange)
+            Spacer(Modifier.height(16.dp))
+            Card(colors = CardDefaults.cardColors(containerColor = WarningOrange.copy(alpha = 0.1f))) {
+                Text("Good effort! Review the weak areas.", Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge, textAlign = TextAlign.Center)
+            }
+            Spacer(Modifier.height(32.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                OutlinedButton(onClick = {}) { Text("Review") }
+                Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Primary)) { Text("Home") }
             }
         }
     }

@@ -21,6 +21,7 @@ import coil3.request.ImageRequest
 import com.studysnap.data.entity.Concept
 import com.studysnap.navigation.Routes
 import com.studysnap.ui.theme.*
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
@@ -67,8 +68,21 @@ fun SubjectStoriesScreen(
                                 .then(Modifier.background(if (idx == pagerState.currentPage) Primary else TextHint))
                         )
                         Spacer(Modifier.width(4.dp))
-                    }
-                }
+}
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun ComicCardPreview() {
+    val concept = Concept("c1", "s1", "Newton's First Law (Inertia)",
+        "An object at rest stays at rest unless acted upon by an unbalanced force. This is the law of inertia.",
+        "Objects resist changes in motion, More mass means more inertia, Net zero force = constant velocity",
+        "Like pushing a shopping cart — a full cart is harder to start and harder to stop."
+    )
+    StudySnapTheme {
+        ComicCard(concept = concept, onQuizClick = {}, onFlashcardClick = {})
+    }
+}
             }
         }
     }

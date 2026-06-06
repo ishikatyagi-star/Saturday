@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.studysnap.ui.theme.*
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,7 +44,8 @@ fun FlashcardsScreen(conceptId: String, viewModel: FlashcardsViewModel = hiltVie
 }
 
 @Composable
-private fun SwipeCard(card: FlashcardsViewModel.CardDisplay, onGotIt: () -> Unit, onReviewLater: () -> Unit) {
+@Composable
+fun SwipeCard(card: FlashcardsViewModel.CardDisplay, onGotIt: () -> Unit, onReviewLater: () -> Unit) {
     var flipped by remember { mutableStateOf(false) }
     val bg by animateColorAsState(if (flipped) Secondary.copy(alpha = 0.08f) else Primary.copy(alpha = 0.08f))
 
@@ -70,8 +72,25 @@ private fun SwipeCard(card: FlashcardsViewModel.CardDisplay, onGotIt: () -> Unit
                             color = when(card.difficulty) { "hard" -> ErrorRed; "medium" -> WarningOrange; else -> Accent })
                     } else {
                         Text(card.back, style = MaterialTheme.typography.bodyLarge, color = Secondary, textAlign = TextAlign.Center)
-                    }
-                }
+}
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun SwipeCardPreview() {
+    val card = FlashcardsViewModel.CardDisplay("f1", "What is inertia?", "The tendency of an object to resist changes in motion.", "easy")
+    StudySnapTheme {
+        SwipeCard(card = card, onGotIt = {}, onReviewLater = {})
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun DoneScreenPreview() {
+    StudySnapTheme {
+        DoneScreen(Modifier.fillMaxSize().padding(32.dp), onRestart = {})
+    }
+}
             }
         }
 

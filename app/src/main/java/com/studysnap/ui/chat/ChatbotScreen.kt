@@ -19,6 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.studysnap.navigation.Routes
 import com.studysnap.ui.theme.*
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,13 +68,36 @@ fun ChatbotScreen(subjectId: String, viewModel: ChatbotViewModel = hiltViewModel
                 IconButton(
                     onClick = { if (input.isNotBlank()) { viewModel.sendMessage(input); input = "" } }
                 ) { Icon(Icons.Default.Send, "Send", tint = Primary) }
+}
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun ChatPreview() {
+    StudySnapTheme {
+        Scaffold(
+            topBar = { TopAppBar(title = { Text("Ask StudySnap") }, colors = TopAppBarDefaults.topAppBarColors(containerColor = Background)) }
+        ) { padding ->
+            Column(Modifier.fillMaxSize().padding(padding).padding(16.dp)) {
+                MessageBubble(ChatbotViewModel.MessageDisplay("user", "What is Newton's First Law?", System.currentTimeMillis()))
+                Spacer(Modifier.height(8.dp))
+                MessageBubble(ChatbotViewModel.MessageDisplay("assistant", "Newton's First Law, also called the Law of Inertia, states that an object at rest stays at rest and an object in motion stays in motion unless acted upon by an unbalanced force.", System.currentTimeMillis()))
+                Spacer(Modifier.weight(1f))
+                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                    OutlinedTextField(value = "", onValueChange = {}, placeholder = { Text("Ask anything...") }, modifier = Modifier.weight(1f))
+                    Spacer(Modifier.width(8.dp))
+                    IconButton(onClick = {}) { Icon(Icons.Default.Send, "Send", tint = Primary) }
+                }
             }
         }
     }
 }
+    }
+}
 
 @Composable
-private fun MessageBubble(message: ChatbotViewModel.MessageDisplay) {
+@Composable
+fun MessageBubble(message: ChatbotViewModel.MessageDisplay) {
     val isUser = message.role == "user"
     Row(Modifier.fillMaxWidth(), horizontalArrangement = if (isUser) Arrangement.End else Arrangement.Start) {
         Surface(

@@ -19,6 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.studysnap.navigation.Routes
 import com.studysnap.ui.theme.*
+import androidx.compose.ui.tooling.preview.Preview
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -134,6 +135,46 @@ fun AddNotesScreen(navController: NavController, viewModel: AddNotesViewModel = 
                     colors = ButtonDefaults.buttonColors(containerColor = Accent),
                     modifier = Modifier.align(Alignment.End)
                 ) { Text("Process Text") }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFAFAFE)
+@Composable
+private fun AddNotesPreview() {
+    StudySnapTheme {
+        Column(Modifier.fillMaxSize().padding(24.dp)) {
+            Text("Add Notes", style = MaterialTheme.typography.displayLarge, color = Primary)
+            Spacer(Modifier.height(4.dp))
+            Text("Choose how to add your study material", style = MaterialTheme.typography.bodyLarge, color = TextSecondary)
+            Spacer(Modifier.height(40.dp))
+            Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Surface), shape = MaterialTheme.shapes.large) {
+                Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Default.CameraAlt, null, tint = Primary, modifier = Modifier.size(32.dp))
+                    Spacer(Modifier.width(16.dp))
+                    Column { Text("Camera", style = MaterialTheme.typography.titleMedium); Text("Capture lecture whiteboard or textbook", style = MaterialTheme.typography.bodyMedium, color = TextSecondary) }
+                }
+            }
+            Spacer(Modifier.height(12.dp))
+            Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Surface), shape = MaterialTheme.shapes.large) {
+                Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Default.PhotoLibrary, null, tint = Secondary, modifier = Modifier.size(32.dp))
+                    Spacer(Modifier.width(16.dp))
+                    Column { Text("Gallery", style = MaterialTheme.typography.titleMedium); Text("Import screenshots or PDF notes", style = MaterialTheme.typography.bodyMedium, color = TextSecondary) }
+                }
+            }
+            Spacer(Modifier.height(12.dp))
+            Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Surface), shape = MaterialTheme.shapes.large) {
+                Column(Modifier.padding(20.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.Edit, null, tint = Accent, modifier = Modifier.size(32.dp))
+                        Spacer(Modifier.width(16.dp))
+                        Text("Text", style = MaterialTheme.typography.titleMedium)
+                    }
+                    Spacer(Modifier.height(8.dp))
+                    OutlinedTextField(value = "", onValueChange = {}, placeholder = { Text("Paste your notes here...") }, modifier = Modifier.fillMaxWidth().height(100.dp))
+                }
             }
         }
     }
