@@ -1,0 +1,46 @@
+=== PHYSICS 101 — NEWTON'S LAWS OF MOTION ===
+Student: Rohan Sharma | Semester 2 | Compiled Notes
+
+--- NEWTON'S FIRST LAW (LAW OF INERTIA) ---
+- An object stays at rest or moves with constant velocity unless an external force acts on it
+- Inertia = resistance to change in motion
+- More mass = more inertia
+- When net force = 0, velocity is constant (includes being at rest)
+- Common mistake: thinking force is needed to KEEP things moving (it's not — in space, things move forever without force)
+
+Real-world examples:
+- Car accelerating → you feel pushed back into seat
+- Car braking → you lurch forward
+- Heavy truck hard to push AND hard to stop
+- Seatbelts prevent inertia from throwing you through windshield
+
+--- NEWTON'S SECOND LAW (F = ma) ---
+- F = ma (Force = mass × acceleration)
+- Acceleration ∝ Force (directly proportional)
+- Acceleration ∝ 1/mass (inversely proportional)
+- Unit: Newton (N) = kg·m/s²
+- Direction: acceleration is in direction of net force
+- Free body diagram → find net force → apply F = ma
+
+Problem solving method:
+1. Draw free body diagram
+2. List all forces
+3. Find net force (vector sum)
+4. Apply a = F_net / m
+5. Check units!
+
+Example: 5 kg block, 20 N force, no friction → a = 4 m/s²
+With 5 N friction: a = (20-5)/5 = 3 m/s²
+
+--- NEWTON'S THIRD LAW (ACTION-REACTION) ---
+- Every action has an equal and opposite reaction
+- Forces come in pairs
+- Key fact: act on DIFFERENT objects → they do NOT cancel
+
+Examples:
+- Walking: foot pushes ground back, ground pushes foot forward
+- Chair: you push chair down, chair pushes you up
+- Rocket: exhaust pushed down, rocket pushed up
+- Hammer and nail: hammer pushes nail down, nail pushes hammer up
+
+Exam tip: always identify what object receives each force in the pair.

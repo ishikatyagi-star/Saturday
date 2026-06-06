@@ -1,0 +1,21 @@
+Physics 101 — Lecture Transcript
+Date: 7th June 2026
+Topic: Newton's Third Law of Motion (Action-Reaction)
+
+Right, last of Newton's laws. Third Law: For every action, there is an equal and opposite reaction. Simple to say, subtle to understand.
+
+What it really means: forces always come in pairs. If object A exerts a force on object B, then object B exerts an equal and opposite force on object A. Always. No exceptions.
+
+Classic example: when you sit on a chair, your body pushes down on the chair. Simultaneously, the chair pushes UP on your body with equal force. If it didn't, you'd fall through the chair. That upward push is the normal force.
+
+Another one: when you walk, your foot pushes backward against the ground. The ground pushes your foot forward. That forward push is what propels you. It's the reaction force. Without it, you'd just slip in place — like on ice, where friction is low and the reaction force is diminished.
+
+CRITICAL point for the exam: action-reaction forces act on DIFFERENT objects. This is the most common mistake. They do NOT cancel each other out because they are not on the same object. If they were on the same object, nothing would ever accelerate, and we know that's not true.
+
+When a hammer hits a nail, the hammer exerts a downward force on the Nail. The nail exerts an upward force on the HAMMER. Different objects. The nail accelerates into the wood. The hammer decelerates slightly. Both experience forces, but they act on different bodies.
+
+Rockets: rocket pushes exhaust gases backward (action), the gases push the rocket forward (reaction). No atmosphere needed — this is why rockets work in space.
+
+Here's a tricky one for the thinking: if a horse pulls a cart, and the cart pulls back with equal force, why does the cart move? Because the forces act on different objects. The horse pulls the CART forward. The cart pulls the HORSE backward. But the horse also pushes against the GROUND, and the ground pushes the horse forward. The ground-horse-forward force is what actually moves the horse-cart system.
+
+That's all three laws. You now have the complete toolkit of classical mechanics. Next week: applying all three laws to complex systems. This WILL be on the final.

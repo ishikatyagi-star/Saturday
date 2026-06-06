@@ -1,0 +1,23 @@
+Physics 101 — Lecture Transcript
+Date: 6th June 2026
+Topic: Newton's Second Law of Motion (F = ma)
+
+Okay, today we're building on the First Law. Newton's Second Law answers the question: "Okay, a force acts on an object. Now what?" The answer is beautifully simple: F = ma.
+
+Force equals mass times acceleration. This is arguably the most important equation in all of physics. Every bridge designed, every rocket launched, every car crash tested — F = ma is at the heart of it.
+
+Let's break it down. The acceleration of an object is DIRECTLY proportional to the net force acting on it. Double the force, you double the acceleration. Triple the force, triple the acceleration. Simple.
+
+But it's also INVERSELY proportional to mass. Double the mass, the acceleration becomes half. That's why the same engine in a sports car gives you lightning acceleration, but in a loaded truck, you barely move.
+
+The unit of force is the Newton. One Newton is the force needed to accelerate 1 kilogram of mass at 1 meter per second squared. So 1 N = 1 kg·m/s². This is important for dimensional analysis in your problem solving.
+
+Direction matters. Acceleration is always in the direction of the net force. If you push a box to the right, it accelerates to the right. If you push down on a table, the table doesn't accelerate down — because the normal force from the floor pushes back up with equal magnitude.
+
+When solving problems: first, draw a free body diagram. Identify ALL forces acting on the object. Find the net force by vector addition. Then apply F = ma. Practice this until it becomes automatic.
+
+Here's an example. A 5 kg block has a 20 N force applied horizontally. What's the acceleration? F = ma, rearrange to a = F/m = 20/5 = 4 m/s². Done.
+
+But what if friction is 5 N opposing motion? Then net force = 20 - 5 = 15 N. a = 15/5 = 3 m/s². See the difference? Always account for all forces.
+
+Homework: problems 6 through 12 from chapter 4. And read ahead on Newton's Third Law — we'll cover it next class.

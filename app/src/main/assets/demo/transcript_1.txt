@@ -1,0 +1,17 @@
+Physics 101 — Lecture Transcript
+Date: 5th June 2026
+Topic: Newton's First Law of Motion
+
+Alright class, settle down. Today we're covering Newton's First Law, also known as the Law of Inertia. This is the foundation of classical mechanics, and you'll need this for the midterm.
+
+So what does the First Law say? Every object continues in its state of rest or uniform motion in a straight line unless it is compelled to change that state by forces impressed upon it. In simpler terms: if it's sitting still, it stays still. If it's moving, it keeps moving at the same speed in the same direction. Unless — and this is the key — an external force acts on it.
+
+Think about sitting in a car. When the car suddenly accelerates, you feel pushed back into your seat. That's your body's inertia resisting the change in motion. When the car brakes hard, you lurch forward — again, inertia. Your body wants to keep moving at the same speed.
+
+The concept of inertia is directly proportional to mass. More mass means more inertia. A truck is harder to push than a bicycle because it has more mass, hence more inertia. This is why heavy objects are harder to start moving AND harder to stop once they're moving.
+
+Key point for the exam: When the net force on an object is zero, the object maintains constant velocity. Constant velocity means no change in speed and no change in direction. It could be at rest — that's constant velocity of zero. Or it could be cruising at 60 km/h on a straight highway. Both are examples of Newton's First Law in action.
+
+Common misconception: students think you need a force to keep things moving. You absolutely do NOT. In space, far from friction and gravity, a object once pushed will keep moving forever. The reason things stop on Earth is because of friction — an external force.
+
+I want you to look at your textbook, page 78, and solve problems 1 through 5 before next class. Any questions? Good, see you Thursday.
